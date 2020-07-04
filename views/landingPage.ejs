@@ -1,0 +1,103 @@
+<%- include("partials/header1") %>
+<link rel="stylesheet" href="/css/landingPage.css">
+</head>
+<body>
+	
+	<!-- =================================================
+			LANDING PAGE NAVIGATION BAR
+	================================================= -->
+<nav class="navbar navbar-expand-lg navbar-dark  fixed-top" id="mainnav">
+  	<a class="navbar-brand" href="/"><img src="https://www.pinclipart.com/picdir/big/337-3370191_job-summary-himachal-pradesh-university-logo-clipart.png"> Himachal Pradesh University</a>
+ 	 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+	  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+		<% if(!currentUser){ %>
+		<li class="nav-item">
+        <a class="nav-link" href="/login"> <i class="fas fa-sign-in-alt"></i> Login <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/signup"><i class="fas fa-user-plus"></i> SignUp</a>
+      </li>
+		<% } else { %>
+	<li class="nav-item">
+        <a class="nav-link" href="#"><i class="fas fa-user"></i> Signed in as <%= currentUser.username %></a>
+      </li>
+	<li class="nav-item">
+        <a class="nav-link" href="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+      </li>
+		<% } %>
+      
+    </ul>
+  </div>
+</nav>
+	
+	<!-- //===========================================
+				Error handling
+//=========================================== -->
+		
+	<div class="container animated fadeIn">
+		
+		<% if (success && success.length>0){ %>
+			<div class="alert alert-success" id="message" role="alert" style="margin-bottom:-50px; margin-top:70px; border: 1px solid green;">
+  			<%=success%>
+			</div>
+		<% } %>
+		
+		<% if (error && error.length>0){ %>
+			<div class="alert alert-danger" id="message" role="alert" style="margin-bottom:-50px; margin-top:70px; border: 1px solid red;">
+  			<%= error %>
+			</div>
+		<% } %>
+</div>
+	
+	
+<!-- Main Section -->
+
+<h1 class="gap"> The All-In-One Platform for HPU ! </h1>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-lg-4 mb-5">
+			<div id="admissions">
+				<a href="/admissions"><img src="https://ngobox.org/news/Admissions-320x815.jpg"></a>
+				
+			</div>
+			<a class="landing-links" href="/admissions">Admissions</a>
+		</div>
+		
+
+		
+		<div class="col-md-6 col-lg-4 mb-5">
+			<div id="admissions">
+				<a href="/examinations"><img src="https://imgk.timesnownews.com/story/1543817495-Thinkstock_exams.jpg?tr=w-1200,h-900"></a>
+				<a class="landing-links" href="/examinations">Examinations</a>
+			</div>
+			
+		</div>
+		
+		<div class="col-md-6 col-lg-4 mb-5">
+			<div id="admissions">
+				<a href="/hostel"><img src="https://ourfacilities.in/wp-content/uploads/2019/06/hostel.jpg"></a>
+				
+			</div>
+			<a class="landing-links" href="/hostel">Hostel</a>
+			
+		</div>
+		
+		<div class="col-md-6 col-lg-4 mb-5">
+			<div id="admissions">
+				<a href="/recruitment"><img src="https://i2.wp.com/www.sutisoft.com/blog/wp-content/uploads/2017/08/AdobeStock_112329826-1-Converted.png?resize=668%2C350&ssl=1"></a>
+				
+			</div>
+			<a class="landing-links" href="/recruitment">Recruitment</a>
+		</div>
+		
+	</div>
+</div>
+	
+	
+
+
+<%- include("partials/footer") %>

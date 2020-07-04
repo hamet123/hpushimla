@@ -1,0 +1,51 @@
+.navbar img {
+	height:40px;
+}
+
+body{
+	background-image: url(https://i.gyazo.com/56fa2ba43eea998c97b41fd85e635a5c.png);
+	background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.navbar {
+	background-color: rgba(0,0,0,0.8);
+}
+
+h1
+{
+	text-align:center;
+	font-weight:800;
+	font-family: 'Dosis', sans-serif;
+	font-size:55px;
+
+	color: black;
+
+text-shadow: 3px 4px 4px rgba(150, 150, 150, 0.9);
+}
+
+.container {
+	margin-top:50px;
+}
+
+.container img {
+	height:200px;
+	width:300px;
+	border:8px solid rgba(50,205,50,0.3);
+	border-radius:20px;
+}
+
+.container img:hover{
+	border:8px solid rgb(50,205,50);
+}
+
+.container .landing-links {
+	margin-left: 80px;
+	color:black;
+	font-family: 'Dosis', Sans-serif;
+	font-size: 25px;
+	font-weight:800;
+}
+

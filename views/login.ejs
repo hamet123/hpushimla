@@ -1,0 +1,12 @@
+<%- include("partials/header1") %>
+<%- include("partials/header2") %>
+
+<form action="/login" method="POST" class="gap">
+	<label for="username-login">Username:</label>
+	<input type="text" placeholder="Enter Your Username" name="username" id="username-login">
+	<label for="password-login">Password:</label>
+	<input type="password" placeholder="Enter Your Password" name="password" id="password-login">
+	<input type="submit" value="Login" class="btn btn-outline-success">
+	
+</form>
+<%- include("partials/footer") %>
