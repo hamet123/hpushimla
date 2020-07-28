@@ -20,6 +20,12 @@
 			  $(".wrapper").removeClass("active");
 			});
 		});
+	
+		// $("#postGraduateButton").click(function(){
+		// 	$("#mainFrame").attr("src","https://www.google.com");
+		// });
+	
+	
 	</script>
 <%- include("partials/header2") %>
 
@@ -77,7 +83,7 @@
             <span>General</span>
           </li>
           <li class="sidebar-dropdown">
-            <a href="#">
+            <a href="https://admissions.hpushimla.in/main.aspx" target="mainframe" id="applyOnlineButton">
               <i class="fa fa-graduation-cap"></i>
               <span>Apply Online</span>
               <span class="badge badge-pill badge-warning">New</span>
@@ -85,18 +91,18 @@
             <div class="sidebar-submenu">
               <ul>
                 <li>
-                  <a href="#">Under-Graduate
+                  <a href="https://admissions.hpushimla.in/Home.aspx" target="mainframe" class="sideBarButton">Under-Graduate
                     <!-- <span class="badge badge-pill badge-success">Pro</span> -->
                   </a>
                 </li>
                 <li>
-                  <a href="#">Post-Graduate</a>
+                  <a href="https://admissions.hpushimla.in/Home.aspx" target="mainframe" class="sideBarButton">Post-Graduate</a>
                 </li>
                 <li>
-                  <a href="#">Certificate/Diploma</a>
+                  <a href="https://admissions.hpushimla.in/Home.aspx" target="mainframe" class="sideBarButton">Certificate/Diploma</a>
                 </li>
 				  <li>
-                  <a href="#">Others</a>
+                  <a href="https://admissions.hpushimla.in/Home.aspx" target="mainframe" class="sideBarButton">Others</a>
                 </li>
               </ul>
             </div>
@@ -110,15 +116,15 @@
             <div class="sidebar-submenu">
               <ul>
                 <li>
-                  <a href="#">Student Login
+                  <a class="sideBarButton" href="https://admissions.hpushimla.in/CommonLogin.aspx" target="mainframe">Student Login
 
                   </a>
                 </li>
                 <li>
-                  <a href="#">Admin Login</a>
+                  <a class="sideBarButton" href="https://admissions.hpushimla.in/Loginpage.aspx" target="mainframe">Admin Login</a>
                 </li>
 				  <li>
-                  <a href="#">Forget User ID/Password</a>
+                  <a class="sideBarButton" href="https://admissions.hpushimla.in/PA_ForgetUserIdAndPwd.aspx" target="mainframe">Forget User ID/Password</a>
                 </li>
               </ul>
             </div>
@@ -131,16 +137,16 @@
             <div class="sidebar-submenu">
               <ul>
                 <li>
-                  <a href="#">Download Admit Card</a>
+                  <a class="sideBarButton" href="https://admissions.hpushimla.in/PA_Print_AdmitCard.aspx" target="mainframe">Download Admit Card</a>
                 </li>
                 <li>
-                  <a href="#">PAY Admission/Renewal fees for Regular Candidates</a>
+                  <a class="sideBarButton" href="https://admissions.hpushimla.in/SemesterPaymentLogin.aspx" target="mainframe">PAY Admission/Renewal fees for Regular Candidates</a>
                 </li>
 				  <li>
-                  <a href="#">Pay ICDEOL Admission Fees Online</a>
+                  <a class="sideBarButton" href="https://admissions.hpushimla.in/SemesterPaymentLoginOnline.aspx" target="mainframe">Pay ICDEOL Admission Fees Online</a>
                 </li>
 				  <li>
-                  <a href="#">Login for Foriegn/Late Candidates</a>
+                  <a class="sideBarButton" href="https://admissions.hpushimla.in/CommonLoginUnRegistered.aspx" target="mainframe">Login for Foriegn/Late Candidates</a>
                 </li>
                 </ul>
             </div>
@@ -233,9 +239,11 @@
     <div class="container-fluid">
       <h2 id="main-header-item">Admissions</h2>
       <hr>
-      <div class="row">
-        <div class="form-group col-md-12">
-          <iframe id="main-frame" src="https://www.guc.ac.bw/wp-content/uploads/2015/03/apply_Final.jpg" wid               th="400px" height="400px" disabled>
+     
+		<div class="row text-center" >
+		   <div class="form-group col-md-12 apply1" id="iframeContainer">
+          <iframe name="mainframe" id="mainFrame" class="apply2" src="https://admissions.hpushimla.in/main.aspx" width="1150px" height="800px" scrolling="no">
+			  
 			  
 			</iframe>
         </div>
@@ -246,7 +254,7 @@
       <footer class="text-center">
         <div class="mb-2">
           <small>
-            © 2020 made with <i class="fa fa-heart" style="color:red"></i> by - <a target="_blank" rel="noopener noreferrer" href="https://azouaoui.netlify.com">
+            © 2020 made with <i class="fa fa-heart" style="color:red"></i> by - <a target="_blank" rel="noopener noreferrer" href="#">
               Ayush Sood
             </a>
           </small>
@@ -263,11 +271,32 @@
   <!-- page-content" -->
 </div>
 <!-- page-wrapper -->
+</div>
+<script>
+	$(".sideBarButton").click(function(){
+		$("#mainFrame").removeClass("apply2");
+		$("#iframeContainer").removeClass("apply1");
+		
+		
+		});
+	
+	$("#applyOnlineButton").click(function(){
+		$("#mainFrame").addClass("apply2");
+		$("#iframeContainer").addClass("apply1");
+	})
+	
+	// $("#iframeContainer").click(function(){
+	// 	$("#mainFrame").attr("target","_blank");
+	// })
+	
+	// $("iframe a").click(function(){
+	// 	$(this).attr("target","_blank");
+	// })
+	
+</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    
-</div>
 <%- include("partials/footer") %>

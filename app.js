@@ -13,17 +13,17 @@ const methodOverride		= require("method-override");
 const bodyParser			= require("body-parser");
 const flash					= require('connect-flash');
 
-mongoose.connect("dbAtlasPath", {useNewUrlParser:true, useUnifiedTopology:true, useCreateIndex:true, useFindAndModify:false}).then(()=>{
-	console.log("Connected to DataBase")
-}).catch((err)=>{
-	console.log("Oops !!! Something went wrong " + err);
-})
-
-// mongoose.connect("mongodb://localhost/hpushimla", {useNewUrlParser:true, useUnifiedTopology:true, useCreateIndex:true, useFindAndModify:false}).then(()=>{
+// mongoose.connect("dbAtlasPath", {useNewUrlParser:true, useUnifiedTopology:true, useCreateIndex:true, useFindAndModify:false}).then(()=>{
 // 	console.log("Connected to DataBase")
 // }).catch((err)=>{
 // 	console.log("Oops !!! Something went wrong " + err);
 // })
+
+mongoose.connect("mongodb+srv://hamet123:Sweethame123@cluster0.rdye7.mongodb.net/<dbname>?retryWrites=true&w=majority", {useNewUrlParser:true, useUnifiedTopology:true, useCreateIndex:true, useFindAndModify:false}).then(()=>{
+	console.log("Connected to DataBase")
+}).catch((err)=>{
+	console.log("Oops !!! Something went wrong " + err);
+})
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/views/assets"));
