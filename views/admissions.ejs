@@ -52,7 +52,7 @@
         </div>
         <div class="user-info">
           <span class="user-name">
-            <strong>Ayush Sood</strong>
+            <strong><%= currentUser.username %></strong>
           </span>
           <span class="user-role">Administrator</span>
 			<% if(currentUser) {%> 
@@ -80,7 +80,7 @@
       <div class="sidebar-menu">
         <ul>
           <li class="header-menu">
-            <span>General</span>
+            <span>Admissions</span>
           </li>
           <li class="sidebar-dropdown">
             <a href="https://admissions.hpushimla.in/main.aspx" target="mainframe" id="applyOnlineButton">
@@ -160,36 +160,29 @@
             <div class="sidebar-submenu">
               <ul>
                 <li>
-                  <a href="http://www.hpuniv.ac.in/employee-telephone-directory.php" target="mainframe" id="helplineButton">University Helpline Numbers</a>
+                  <a href="/html/phone.html" target="mainframe" id="helplineButton">University Helpline Numbers</a>
                 </li>
-                <li>
-                  <a href="#">Other Phone Numbers</a>
-                </li>
+                
               </ul>
             </div>
           </li>
           <li class="header-menu">
-            <span>Extra</span>
+            <span>Get in Touch !!!</span>
           </li>
           <li>
             <a href="#">
-              <i class="fa fa-book"></i>
-              <span>Documentation</span>
-              <span class="badge badge-pill badge-primary">Beta</span>
+              <i class="fa fa-envelope"></i>
+              <span>Contact Us</span>
+              <span class="badge badge-pill badge-primary"></span>
             </a>
           </li>
           <li>
             <a href="#">
-              <i class="fa fa-calendar"></i>
-              <span>Calendar</span>
+              <i class="fa fa-question"></i>
+              <span>HelpDesk</span>
             </a>
           </li>
-          <li>
-            <a href="#">
-              <i class="fa fa-folder"></i>
-              <span>Examples</span>
-            </a>
-          </li>
+          
         </ul>
       </div>
       <!-- sidebar-menu  -->
@@ -354,7 +347,7 @@
 		$("#mainFrame").removeClass("apply2");
 		$("#iframeContainer").removeClass("apply1");
 		$("#main-header-item").text("Helpline Numbers");
-		$("#mainFrame").attr("src","http://www.hpuniv.ac.in/employee-telephone-directory.php");
+		$("#mainFrame").attr("height","1800px");
 		
 		
 
