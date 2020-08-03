@@ -22,4 +22,12 @@ router.get("/recruitment", middleWare.isLoggedIn, (req,res)=>{
 	res.render("recruitment");
 })
 
+router.get("/contact", middleWare.isLoggedIn, (req,res)=>{
+	res.render("contact");
+})
+
+router.post("/contact", middleWare.isLoggedIn, (req,res)=>{
+	res.send("You hit the POST route for contact form !!!");
+})
+
 module.exports = router;

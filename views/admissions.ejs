@@ -170,7 +170,7 @@
             <span>Get in Touch !!!</span>
           </li>
           <li>
-            <a href="#">
+            <a href="/contact" target="mainframe" id="contactButton">
               <i class="fa fa-envelope"></i>
               <span>Contact Us</span>
               <span class="badge badge-pill badge-primary"></span>
@@ -232,7 +232,7 @@
 			Footer
 	  ============================================= -->
 			
-			<div style="margin:0 auto; margin-top:100px;">
+			<!-- <div style="margin:0 auto; margin-top:100px;">
 				<footer>
         <div class="mb-2">
           <small>
@@ -247,7 +247,7 @@
           </a>
           
         </div>
-      </footer>
+      </footer> -->
 			</div>
 			
     </div>
@@ -348,9 +348,14 @@
 		$("#iframeContainer").removeClass("apply1");
 		$("#main-header-item").text("Helpline Numbers");
 		$("#mainFrame").attr("height","1800px");
-		
-		
-
+	});
+	
+	$("#contactButton").click(function(){
+		$("#mainFrame").removeClass("download-notification2");
+		$("#iframeContainer").removeClass("download-notification1");
+		$("#mainFrame").removeClass("apply2");
+		$("#iframeContainer").removeClass("apply1");
+		$("#main-header-item").text("Fill the form below to Get in touch with us !!!");
 	})
 	
 	
